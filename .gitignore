@@ -1,0 +1,7 @@
+local_settings.py
+.vscode
+*.log
+*.pot
+*.pyc
+__pycache__/
+venv
