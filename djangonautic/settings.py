@@ -128,3 +128,7 @@ try:
 
 except ImportError:
     pass
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)
