@@ -19,7 +19,10 @@
                             <button type="submit">logout</button>
                           </form>
                       </li>
+                      <li><a href="{% url 'articles:create' %}" class="highlight">New Article</a></li>
                       {% else %}
+                      <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                      <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
                       {% endif %}
                   </ul>
               </nav>      
