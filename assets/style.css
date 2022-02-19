@@ -130,3 +130,15 @@ a.highlight{
     color: #ff5722;
     margin: 10px 0;
 }
+
+.errorlist{
+    padding: 0;
+}
+
+.site-form input[type="submit"]{
+    background: #00dba0;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 4px;
+    margin: 10px 0;
+}
