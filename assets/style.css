@@ -85,13 +85,13 @@ nav button{
     margin: 0;
     color: #0f121f;
 }
-.article .edit{
+.article-detail .article .edit{
     padding: 10px;
     background: indigo;
     position: absolute;
     right: 0;
     text-decoration:dashed;
-    top: 0;
+    bottom: 0;
     margin: 0;
     color: white;
 }

@@ -8,6 +8,7 @@
         <h2>{{ article.title }}</h2>
         <p>{{ article.body }}</p>
         <p>{{ article.date }}</p>
+        <p><a href="{% url 'articles:edit' article.id %}" class="edit">Edit Article</a></p>
     </div>
 </div>
 
