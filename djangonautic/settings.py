@@ -143,3 +143,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 import django_on_heroku
 
 django_on_heroku.settings(locals())
+
+# Login Redirect
+LOGIN_URL = 'accounts:login'

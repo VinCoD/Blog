@@ -38,7 +38,7 @@ def edit_article(request, article_id):
         form = forms.CreateArticle(instance=article, data=request.POST, files=request.FILES) 
         if form.is_valid():
             form.save()
-            return redirect('articles:list')
+            return redirect()
     
     context = {'article': article, 'form': form}
 
