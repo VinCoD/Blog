@@ -15,7 +15,7 @@ def article_detail(request, slug):
     article = Article.objects.get(slug=slug)
     return render(request, 'articles/article_detail.html', {'article': article})
 
-@login_required(login_url='/accounts/login')
+@login_required()
 def article_create(request):
     if request.method == 'POST':
         form = forms.CreateArticle(request.POST, request.FILES)
@@ -38,7 +38,7 @@ def edit_article(request, article_id):
         form = forms.CreateArticle(instance=article, data=request.POST, files=request.FILES) 
         if form.is_valid():
             form.save()
-            return redirect()
+            return redirect('articles:list')
     
     context = {'article': article, 'form': form}
 
