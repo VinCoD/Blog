@@ -28,3 +28,19 @@ def article_create(request):
         form = forms.CreateArticle()
     return render(request, 'articles/article_create.html', {'form': form})
 
+def edit_article(request, article_id):
+    article = Article.objects.get(id=article_id)
+
+    if request.method != 'POST':
+        form = forms.CreateArticle(instance=article)
+        
+    else:
+        form = forms.CreateArticle(instance=article, data=request.POST) 
+        if form.is_valid():
+            form.save()
+            return redirect('articles:list')
+    
+    context = {'article': article, 'form': form}
+
+    return render(request, 'articles/edit_article.html', context)
+
