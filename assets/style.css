@@ -1,7 +1,7 @@
 body{
     background-color: #0f121f;
     background-image: url('stars.png');
-    background-repeat-y: no-repeat;
+    background-repeat: no-repeat;
     color: #fff;
 }
 
@@ -70,7 +70,7 @@ nav button{
     color: #ff5722;
 }
 
-.article h2{
+.articles .article h2{
     font-size: 1.2em;
     color: #ff5722;
     text-decoration: underline;
@@ -94,6 +94,10 @@ nav button{
     bottom: 0;
     margin: 0;
     color: white;
+}
+.article-detail .article h2{
+    color: rgb(6, 230, 255);
+    font-weight: bolder;
 }
 
 .article-detail .article{
