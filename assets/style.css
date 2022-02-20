@@ -73,6 +73,7 @@ nav button{
 .article h2{
     font-size: 1.2em;
     color: #ff5722;
+    text-decoration: underline;
 }
 
 .article .author{
@@ -83,6 +84,16 @@ nav button{
     bottom: 0;
     margin: 0;
     color: #0f121f;
+}
+.article .edit{
+    padding: 10px;
+    background: indigo;
+    position: absolute;
+    right: 0;
+    text-decoration:dashed;
+    top: 0;
+    margin: 0;
+    color: white;
 }
 
 .article-detail .article{
