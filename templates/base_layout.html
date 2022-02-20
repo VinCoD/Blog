@@ -13,6 +13,7 @@
               <nav>
                   <ul>
                       {% if user.is_authenticated %}
+                      <li>Hello {{ user.username }}</li>
                       <li>
                           <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
                             {% csrf_token %}
@@ -22,6 +23,7 @@
                       <li><a href="{% url 'articles:create' %}" class="highlight">New Article</a></li>
                       {% else %}
                       <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                      
                       <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
                       {% endif %}
                   </ul>
