@@ -63,6 +63,8 @@ nav button{
     border: 1px solid #00dba0;
     position: relative;
     padding-bottom: 40px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .articles h2 a{
@@ -162,4 +164,26 @@ a.highlight{
     font-size: 1.2em;
     border-radius: 4px;
     margin: 10px 0;
+}
+
+@media only screen and (max-width: 1200px){
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    header{
+        display:flex;
+        justify-content: space-between;
+        font-size: ;
+        
+    }
+    nav button{
+        font-size: 2em;
+    }
+    a.highlight{
+        font-size: 2rem;
+}
+    .user-name{
+        font-size: 2rem;
+    }
 }
