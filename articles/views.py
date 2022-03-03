@@ -15,7 +15,7 @@ def article_detail(request, slug):
     article = Article.objects.get(slug=slug)
     return render(request, 'articles/article_detail.html', {'article': article})
 
-@login_required()
+@login_required
 def article_create(request):
     if request.method == 'POST':
         form = forms.CreateArticle(request.POST, request.FILES)
@@ -28,17 +28,22 @@ def article_create(request):
         form = forms.CreateArticle()
     return render(request, 'articles/article_create.html', {'form': form})
 
+     
+@login_required
 def edit_article(request, article_id):
     article = Article.objects.get(id=article_id)
+    if article.author == request.user:
 
-    if request.method != 'POST':
-        form = forms.CreateArticle(instance=article)
-        
+        if request.method != 'POST':
+            form = forms.CreateArticle(instance=article)
+            
+        else:
+            form = forms.CreateArticle(instance=article, data=request.POST, files=request.FILES) 
+            if form.is_valid():
+                form.save()
+                return redirect('articles:list')
     else:
-        form = forms.CreateArticle(instance=article, data=request.POST, files=request.FILES) 
-        if form.is_valid():
-            form.save()
-            return redirect('articles:list')
+        return redirect('articles:list')
     
     context = {'article': article, 'form': form}
 
