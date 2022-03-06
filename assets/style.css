@@ -97,6 +97,9 @@ nav button{
     margin: 0;
     color: white;
 }
+.article-detail .article p{
+    padding:10px;
+}
 .article-detail .article h2{
     color: rgb(6, 230, 255);
     font-weight: bolder;
