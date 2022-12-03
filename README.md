@@ -1,5 +1,5 @@
 # Blog
-## From The Net Ninja's: It is a very beautiful blog
+## Contributor's Guide
 - Create A virtual environment ```virtualenv venv```
 - Run ```source venv/bin/activate``` to activate the virtual environment
 - Run ```pip install -r requirements.txt ``` To install all packages required by the project
